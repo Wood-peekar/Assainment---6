@@ -64,7 +64,7 @@ const displayPlants = (trees) => {
         plantDiv.innerHTML = `
         <div class="border rounded-lg bg-white py-3 px-2 shadow">
             <img class="rounded-lg w-full h-[186px] object-cover mx-auto" src="${tree.image}" alt="${tree.name}">
-            <p class="tree-name cursor-pointer text-[16px] font-bold p-2 pb-0 text-green-700 hover:underline" data-name="${tree.name}">${tree.name}</p>
+            <p class="text-[16px] font-bold p-2 pb-0">${tree.name}</p>
             <p class="p-2 text-sm">${tree.description.slice(0, 60)}...</p>
             <div class="flex justify-between items-center my-2 mx-2">
                 <p class="bg-green-200 rounded-3xl p-2 text-sm">${tree.category}</p>
@@ -79,7 +79,7 @@ const displayPlants = (trees) => {
         `;
         plantContainer.append(plantDiv)
     };
-    enableTreeModal();
+
     addToCartButton();
 
 };
@@ -143,6 +143,7 @@ const removeFromCart = (index) => {
     cart.splice(index, 1);
     cartInfo();
 };
+
 loadButton()
 loadPlants();
 
